@@ -1,0 +1,235 @@
+---
+---
+
+@font-face {
+    font-family: Lexend;
+    src: url("/assets/fonts/lexend/Lexend.ttf");
+}
+
+@font-face {
+    font-family: ComicSans;
+    src: url("/assets/fonts/comic_sans/comic.ttf");
+}
+
+/* @import "{{ site.theme }}"; */
+
+body {
+    font-family: Lexend;
+    text-align:center;
+    background-image: none;
+    background-color: #000000;
+    color: #00be00;
+}
+
+footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    background-color: #000000;
+    color: #00ff00;
+    border-top: 1px dashed #006900;
+}
+
+/* unvisited link */
+a:link {
+    color: #0ac139;
+    text-decoration: underline;
+}
+
+/* visited link */
+a:visited {
+    color: #0ac139;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #0ac139;
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    color: #0ac139;
+    text-decoration: underline;
+}
+
+a {
+    color: #0ac139;
+    text-decoration: underline;
+}
+
+h1 {
+    color: #006900;
+}
+
+h2 {
+    color: #006900;
+}
+
+h3 {
+    color: #00be00;
+}
+
+h4 {
+    color: #006900;
+}
+
+h5 {
+    color: #006900;
+}
+
+h6 {
+    color: #00ff00;
+}
+
+hr { 
+    border-top: 1px dashed #006900;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inline;
+    border-width: 1px;
+}
+
+table {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    border: none;
+    max-width: 99%;
+}
+
+table.navbar {
+    cellspacing: 10;
+}
+
+tr {
+    border: none;
+}
+
+th {
+    text-align:center;
+    border: none;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+button {
+    font-family: Lexend;
+    background-color: #000000;
+    color: #00FF00;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+div.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* navbar */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* navbar */
+li.navbar {
+    border-right: 1px dashed #006900;
+    display: inline-block;
+}
+
+li.navbar:last-child {
+    border-right:none;
+}
+
+li.navbar a {
+    font-family: ComicSans;
+    display: block;
+    color: #00be00;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to on hover */
+li.navbar a:hover {
+    background-color: #003300;
+}
+
+/*coustom scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0f0; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #009900; 
+}
+
+/*corner where the scrollbars meet*/
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.collapsible {
+    background-color: #006900;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #009000;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.innertext {
+    padding: 0 15%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #000;
+    text-align: center;
+}

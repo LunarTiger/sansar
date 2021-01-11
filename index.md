@@ -1,0 +1,1 @@
+<script src="{{ site.github.url }}/assets/js/fix.js"></script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=RyQA5rLO48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=RyQA5rLO48">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=RyQA5rLO48">
+    <link rel="manifest" href="{{ site.github.url }}/assets/site.webmanifest?v=RyQA5rLO48">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=RyQA5rLO48" color="#006900">
+    <link rel="shortcut icon" href="/favicon.ico?v=RyQA5rLO48">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#006900">
+
+
+{% seo %}
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a href="{{ site.github.url }}"><h1>{{ site.title | default: site.github.repository_name }}</h1></a>
+        <hr />
+        <nav>
+          <ul class="navbar">
+            <li class="navbar"><a href="{{ site.github.url }}/about/gravity">Gravity</a></li>
+          </ul>
+        </nav>
+        <hr />
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <hr id="bottomhr" />
+      </div>
+    </header>
+    <div class="container">
+      <section id="main_content" style="text-align:center">
+
+      {{ content }}
+
+      </section>
+    </div>
+    <script src="/assets/js/collapsible.js"></script>
+  </body>
+  <footer>
+    <nav>
+      <ul class="navbar">
+        <li class="navbar"><a href="/">Home</a></li>
+        <li class="navbar"><a href="/contact">Contact Me</a></li>
+        <li class="navbar"><a href="/projects#sansar">My Projects</a></li>
+      </ul>
+    </nav>
+  </footer>
+</html>
