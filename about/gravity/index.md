@@ -1,5 +1,7 @@
 <h2>Gravity</h2>
 <br />
+<img src='/sansar/assets/img/gravity.png'>
+<br />
 <p>A script for your world that sets gravity.<br />Change gravity using "/g [number]"<br />Reset gravity using "/g default"<br />Get a list of planets using "/g planets"</p>
 <br />
 <p>Source code:</p>
