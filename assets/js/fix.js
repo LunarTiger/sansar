@@ -1,1 +1,0 @@
-document.getElementById('bottomhr').style = "height:0px; visibility:hidden;";
