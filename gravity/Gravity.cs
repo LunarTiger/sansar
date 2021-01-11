@@ -34,7 +34,7 @@ public class Gravity : SceneObjectScript
 
     private void OnChat(ChatData data)
     {
-        // Parse the chat message into an array of strings and look for a "/gravity" command
+        // Parse the chat message into an array of strings and look for a "/g" command
         var cmds = data.Message.Split(new Char[] { ' ' });
         if (cmds[0] == "/g")
         {
@@ -47,7 +47,7 @@ public class Gravity : SceneObjectScript
                     ScenePrivate.Chat.MessageAllUsers("Set gravity to: " + value + "m/s");
                     ScenePrivate.SetGravity(value);  // Assign the scene's gravity to the number
                 }
-                // Otherwise reset the scene to default gravity if specified
+                // Otherwise reset the scene to default gravity specified
                 else if (cmds[1] == "default")
                 {
                     ScenePrivate.Chat.MessageAllUsers("Set gravity back to default. (" + default_gravity +"m/s)");
