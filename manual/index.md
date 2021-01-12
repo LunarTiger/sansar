@@ -1,4 +1,4 @@
-<h2>Gravity</h2>
+<h2>Manual</h2>
 <br />
 <img src='manual.png' style="max-width:100%;height:auto;" />
 <br />
