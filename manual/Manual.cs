@@ -39,12 +39,12 @@ public class Manual : SceneObjectScript
                 // Gravity
                 else if (cmds[1] == "g" || cmds[1] == "/g")
                 {
-                    ScenePrivate.Chat.MessageAllUsers("/g\nA command to set the gravity. Accepts values from 0-49.\n************\nArguments:\ndefault - resets to default gravity\nplanets - lists the planets avaliable to set the gravity\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
+                    ScenePrivate.Chat.MessageAllUsers("/g\nA command to set the gravity.\nAccepts values from 0-49.\n************\nArguments:\ndefault - resets to default gravity\nplanets - lists the planets avaliable to set the gravity\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
                 }
                 // tk
                 else if (cmds[1] == "tk" || cmds[1] == "/tk")
                 {
-                    ScenePrivate.Chat.MessageAllUsers("/tk\nPlays videos/displays webpages.\n************\nExamples:\n************\n/tk https://lunartiger.gthub.io/tk\n/tk https://youtu.be/dQw4w9WgXcQ");
+                    ScenePrivate.Chat.MessageAllUsers("/tk\nPlays videos/displays webpages.\n************\nExamples:\n/tk https://lunartiger.gthub.io/tk\n/tk https://youtu.be/dQw4w9WgXcQ");
                 }
                 // destinations/places
                 else if (cmds[1] == "destinations" || cmds[1] == "/destinations")
@@ -75,12 +75,12 @@ public class Manual : SceneObjectScript
                 // void
                 else if (cmds[1] == "void" || cmds[1] == "/void")
                 {
-                    ScenePrivate.Chat.MessageAllUsers("/void\nTeleports you to the void.\nThis is another world.");
+                    ScenePrivate.Chat.MessageAllUsers("/void\nTeleports you to the void.\n*This is another world.*");
                 }
                 // man
                 else if (cmds[1] == "man" || cmds[1] == "/man")
                 {
-                    ScenePrivate.Chat.MessageAllUsers("/man\nThis is a helpful manual. Just use the command \"/man\" along with an avaliable command to find out more about it.\nAvaliable Commands:  " + AvaliableCommands);
+                    ScenePrivate.Chat.MessageAllUsers("/man\nThis is a helpful manual. Just use the command \"/man\" along with an avaliable command to find out more about it.\n************\nAvaliable Commands:\n" + AvaliableCommands + "\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
                 }
                 // if no matches found
                 else
