@@ -80,7 +80,7 @@ public class Manual : SceneObjectScript
                 // man
                 else if (cmds[1] == "man" || cmds[1] == "/man")
                 {
-                    ScenePrivate.Chat.MessageAllUsers("/man\nThis is a helpful manual. Just use the command \"/man\" along with an avaliable command to find out more about it.\n************\nAvaliable Commands:\n" + AvaliableCommands + "\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
+                    ScenePrivate.Chat.MessageAllUsers("/man\nThis is a helpful manual. Just use the command \"/man\" along with an avaliable command to find out more about it.\n************\nAvaliable Commands:\n" + AvaliableCommands + "\n************\nSource Code:  https://lunartiger.github.io/sansar/manual");
                 }
                 // if no matches found
                 else
