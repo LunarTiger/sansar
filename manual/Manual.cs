@@ -13,6 +13,7 @@ using System;
 // To get full access to the Object API a script must extend from ObjectScript
 public class Manual : SceneObjectScript
 {
+    //I know this isn't how you're supposed to declare variables for a script, but it works, so fuck it
     [DisplayName("Avaliable Commands")]
     [DefaultValue("man, tk, g, lunar, destinations, places, studio, field, house, ctrl, void")]
     public readonly string AvaliableCommands;
@@ -25,7 +26,7 @@ public class Manual : SceneObjectScript
 
     private void OnChat(ChatData data)
     {
-        // Parse the chat message into an array of strings and look for a "/g" command
+        // Parse the chat message into an array of strings and look for a "/man" command
         var cmds = data.Message.Split(new Char[] { ' ' });
         if (cmds[0] == "/man")
         {
@@ -90,7 +91,7 @@ public class Manual : SceneObjectScript
                     ScenePrivate.Chat.MessageAllUsers("Unknown command. Avaliable Commands:  " + AvaliableCommands);
                 }
             }
-            // If no additional parameter was specified, print out the scene's current gravity
+            // If no additional parameter was specified, print out the avaliable commands.
             else
             {
                 ScenePrivate.Chat.MessageAllUsers("Avaliable Commands:  " + AvaliableCommands);
