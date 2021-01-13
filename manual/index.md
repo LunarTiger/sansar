@@ -2,7 +2,7 @@
 <br />
 <img src='manual.png' style="max-width:100%;height:auto;" />
 <br />
-<p>A manual for <a href="https://atlas.sansar.com/experiences/lunar-6624/lunar-s-test-world" target="_blank" rel="noopener noreferrer">Lunar's Chill Hangout</a>.</p>
+<p>A manual for <a href="https://atlas.sansar.com/experiences/lunar-6624/lunar-s-test-world" target="_blank" rel="noopener noreferrer">Lunar's Chill Hangout</a>.<br />Special thanks to Tiki for helping me.</p>
 <br />
 <p>Source code:</p>
 <div id='rawfile0' style="border: 0;max-width:100%;max-height:95%;height:900px;width:705px;display:inline-block;">
