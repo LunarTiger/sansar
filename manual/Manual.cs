@@ -38,12 +38,12 @@ public class Manual : SceneObjectScript
                 // Lunar
                 if (cmds[1] == "lunar" || cmds[1] == "/lunar")
                 {
-                    agent.SendChat("/lunar\nGives a link to Lunar's linktree.");
+                    agent.SendChat("/lunar\nDisplays \"Lunar: https://linktr.ee/lunar69\" which is a link to Lunar's linktree.");
                 }
                 // Gravity
                 else if (cmds[1] == "g" || cmds[1] == "/g")
                 {
-                    agent.SendChat("/g\nA command to set the gravity.\nAccepts values from 0-49.\n************\nArguments:\ndefault - resets to default gravity\nplanets - lists the planets avaliable to set the gravity\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
+                    agent.SendChat("/g\nA command to set the gravity.\nAccepts values from 0-49.\n************\nArguments:\n~help - displays help\n~default - resets to default gravity\n~reset - resets to default gravity\n~planets - lists the planets avaliable to set the gravity\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
                 }
                 // tk
                 else if (cmds[1] == "tk" || cmds[1] == "/tk")

@@ -1,5 +1,5 @@
 ﻿/*******************
- *   Version 0.4   *
+ *   Version 0.5   *
  *******************
 
  * This content is licensed under the terms of the Creative Commons Attribution 4.0 International License.
@@ -34,6 +34,8 @@ public class Gravity : SceneObjectScript
 
     private void OnChat(ChatData data)
     {
+        SessionId ssid = data.SourceId;
+        AgentPrivate agent = ScenePrivate.FindAgent(ssid);
         // Parse the chat message into an array of strings and look for a "/g" command
         var cmds = data.Message.Split(new Char[] { ' ' });
         if (cmds[0] == "/g")
@@ -47,8 +49,13 @@ public class Gravity : SceneObjectScript
                     ScenePrivate.Chat.MessageAllUsers("Set gravity to: " + value + "m/s");
                     ScenePrivate.SetGravity(value);  // Assign the scene's gravity to the number
                 }
+                //help
+                else if (cmds[1] == "help")
+                {
+                    agent.SendChat("\nA command to set the gravity.\nAccepts values from 0-49.\n************\nArguments:\n~help - displays this help\n~default - resets to default gravity\n~reset - resets to default gravity\n~planets - lists the planets avaliable to set the gravity\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
+                }
                 // Otherwise reset the scene to default gravity specified
-                else if (cmds[1] == "default")
+                else if (cmds[1] == "default" || cmds[1] == "reset")
                 {
                     ScenePrivate.Chat.MessageAllUsers("Set gravity back to default. (" + default_gravity +"m/s)");
                     ScenePrivate.SetGravity(default_gravity);
@@ -56,7 +63,7 @@ public class Gravity : SceneObjectScript
                 // Gravity of different planets
                 else if (cmds[1] == "planets")
                 {
-                    ScenePrivate.Chat.MessageAllUsers("The following planets' gravity can be set: mercury, venus, earth, moon, mars, jupiter, saturn, uranus, pluto");
+                    agent.SendChat("The following planets' gravity can be set: mercury, venus, earth, moon, mars, jupiter, saturn, uranus, pluto");
                 }
                 else if (cmds[1] == "mercury")
                 {
@@ -103,11 +110,15 @@ public class Gravity : SceneObjectScript
                     ScenePrivate.Chat.MessageAllUsers("Set Pluto gravity. (0.62m/s)");
                     ScenePrivate.SetGravity(0.62f);
                 }
+                else
+                {
+                    agent.SendChat("¯\\_(ツ)_/¯ huh");
+                }
             }
             // If no additional parameter was specified, print out the scene's current gravity
             else
             {
-                ScenePrivate.Chat.MessageAllUsers("Gravity is set to: " + ScenePrivate.GetGravity() + "m/s");
+                agent.SendChat("Gravity is set to: " + ScenePrivate.GetGravity() + "m/s");
             }
         }
     }
