@@ -16,7 +16,7 @@ public class Manual : SceneObjectScript
 {
     //I know this isn't how you're supposed to declare variables for a script, but it works, so fuck it
     [DisplayName("Avaliable Commands")]
-    [DefaultValue("man, tk, g, lunar, destinations, places, studio, field, house, ctrl, void")]
+    [DefaultValue("man, tk, g, lunar, destinations, places, afk, brb, studio, field, house, ctrl, void")]
     public readonly string AvaliableCommands;
 
     public override void Init()
@@ -53,11 +53,11 @@ public class Manual : SceneObjectScript
                 // destinations/places
                 else if (cmds[1] == "destinations" || cmds[1] == "/destinations")
                 {
-                    agent.SendChat("/destinations\nPrints out a list of the destinations within the world.");
+                    agent.SendChat("/destinations\nPrints out a list of the destinations within the world.\n~Same as /places");
                 }
                 else if (cmds[1] == "places" || cmds[1] == "/places")
                 {
-                    agent.SendChat("/places\nPrints out a list of the destinations within the world.");
+                    agent.SendChat("/places\nPrints out a list of the destinations within the world.\n~Same as /destinations");
                 }
                 // in-world teleports
                 else if (cmds[1] == "ctrl" || cmds[1] == "/ctrl")
@@ -86,11 +86,20 @@ public class Manual : SceneObjectScript
                 {
                     agent.SendChat("/man\nThis is a helpful manual. Just use the command \"/man\" along with an avaliable command to find out more about it.\n************\nAvaliable Commands:\n" + AvaliableCommands + "\n************\nSource Code:  https://lunartiger.github.io/sansar/manual");
                 }
+                //afk/brb
+                else if (cmds[1] == "afk" || cmds[1] == "/afk")
+                {
+                    agent.SendChat("afk\nTyping \"afk\" in chat will make you do an emote, making it obvious you're not available.\nWorks with or wothout \"/\"\n~Same as brb");
+                }
+                else if (cmds[1] == "brb" || cmds[1] == "/brb")
+                {
+                    agent.SendChat("brb\nTyping \"brb\" in chat will make you do an emote, making it obvious you're not available.\nWorks with or wothout \"/\"\n~Same as afk");
+                }
                 // if no matches found
                 else
                 {
                     //($"Unknown command. Avaliable Commands:  {AvaliableCommands}");
-                    agent.SendChat("Unknown command. Avaliable Commands:  " + AvaliableCommands);
+                    agent.SendChat("Unknown command ¯\\_(ツ)_/¯\n************\nAvaliable Commands:\n" + AvaliableCommands);
                 }
             }
             // If no additional parameter was specified, print out the avaliable commands.
