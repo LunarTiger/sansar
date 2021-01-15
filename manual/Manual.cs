@@ -16,7 +16,7 @@ public class Manual : SceneObjectScript
 {
     //I know this isn't how you're supposed to declare variables for a script, but it works, so fuck it
     [DisplayName("Avaliable Commands")]
-    [DefaultValue("man, tk, g, lunar, destinations, places, afk, brb, studio, field, house, ctrl, void")]
+    [DefaultValue("man, tk, g, lunar, destinations, places, afk, brb, studio, field, house, hub, ctrl, void")]
     public readonly string AvaliableCommands;
 
     public override void Init()
@@ -71,6 +71,10 @@ public class Manual : SceneObjectScript
                 else if (cmds[1] == "house" || cmds[1] == "/house")
                 {
                     agent.SendChat("/house\n-Teleports you to a tiny house.\n~In world teleport.");
+                }
+                else if (cmds[1] == "hub" || cmds[1] == "/hub")
+                {
+                    agent.SendChat("/hub\n-Teleports you to a hub that links to other worlds.\n~In world teleport.");
                 }
                 else if (cmds[1] == "studio" || cmds[1] == "/studio")
                 {
