@@ -48,7 +48,7 @@ public class Manual : SceneObjectScript
                 // tk
                 else if (cmds[1] == "tk" || cmds[1] == "/tk")
                 {
-                    agent.SendChat("/tk\n-Plays videos/displays webpages.\n************\nExamples:\n/tk https://lunartiger.gthub.io/tk\n/tk https://youtu.be/dQw4w9WgXcQ");
+                    agent.SendChat("/tk\n-Plays videos/displays webpages.\n************\nExamples:\n/tk https://lunartiger.github.io/tk\n/tk https://youtu.be/dQw4w9WgXcQ");
                 }
                 // destinations/places
                 else if (cmds[1] == "destinations" || cmds[1] == "/destinations")
