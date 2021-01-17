@@ -60,7 +60,7 @@ public class Gravity : SceneObjectScript
                 // help
                 else if (cmds[1] == "help")
                 {
-                    agent.SendChat("/g\n-A command to set the gravity.\n-Accepts values from 0-49.\n************\nArguments:\n-help - displays this help\n-default - displays the default gravity\nreset - resets to default gravity\n-planets - lists the planets avaliable to set the gravity to\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
+                    agent.SendChat("/g\n-A command to set the gravity.\n-Accepts values from 0-49.\n************\nArguments:\n-help - displays this help\n-default - displays the default gravity\n-reset - resets to default gravity\n-planets - lists the planets available to set the gravity to\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************\nSource Code:  https://lunartiger.github.io/sansar/gravity");
                 }
                 // reset to default gravity
                 else if (cmds[1] == "reset")
@@ -263,7 +263,7 @@ public class Gravity : SceneObjectScript
         // help
         else if (cmds[0] == "/help")
         {
-            agent.SendChat("\n************\n/g\n-A command to set the gravity.\n-Accepts values from 0-49.\n************\nArguments:\n-help - displays this help\n-default - displays the default gravity\n-reset - resets to default gravity\n-planets - lists the planets avaliable to set the gravity to\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************");
+            agent.SendChat("\n************\n/g\n-A command to set the gravity.\n-Accepts values from 0-49.\n************\nArguments:\n-help - displays this help\n-default - displays the default gravity\n-reset - resets to default gravity\n-planets - lists the planets available to set the gravity to\n************\nExamples:\n/g 3.14\n/g default\n/g planets\n************");
         }
     }
 }
